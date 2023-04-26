@@ -1,0 +1,18 @@
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        Console.Write("Nhập số lượng học sinh trong lớp: ");
+        int n = int.Parse(Console.ReadLine());
+
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            Console.Write($"Nhập điểm của học sinh thứ {i}: ");
+            int diem = int.Parse(Console.ReadLine());
+            sum += diem;
+        }
+
+        double average = (double) sum / n;
+        Console.WriteLine($"Điểm trung bình của lớp là {average:F2}");
+    }
+}
